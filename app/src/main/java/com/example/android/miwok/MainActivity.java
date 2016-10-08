@@ -18,9 +18,13 @@ package com.example.android.miwok;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutCompat;
 import android.view.View;
+import android.widget.GridView;
 import android.view.View.OnClickListener;
+import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -31,68 +35,86 @@ public class MainActivity extends AppCompatActivity {
         // Set the content of the activity to use the activity_main.xml layout file
         setContentView(R.layout.activity_main);
 
-        // Find the View that shows the numbers category
+        //Encontra a TextView que quero manipular e coloca dentro do objeto que denominei de "numbers"
         TextView numbers = (TextView) findViewById(R.id.numbers);
 
-        // Set a click listener on that View
-        numbers.setOnClickListener(new OnClickListener() {
-            // The code in this method will be executed when the numbers category is clicked on.
+        if (numbers == null) throw new AssertionError();//AndroidStudio me obrigou a colocar
+
+        //Coloca um clickListener (escutador de click) no objeto que encontrou a View
+        numbers.setOnClickListener(new OnClickListener(){
+
             @Override
             public void onClick(View view) {
-                // Create a new intent to open the {@link NumbersActivity}
+                //Cria uma nova intenção "Intent" para abrir o {@link NumbersActivity) quando clicado
                 Intent numbersIntent = new Intent(MainActivity.this, NumbersActivity.class);
 
-                // Start the new activity
+                //Inicia a nova atividade
                 startActivity(numbersIntent);
+
             }
         });
 
-        // Find the View that shows the family category
+
+        //Encontra a TextView que quero manipular e coloca dentro do objeto que denominei de "family"
         TextView family = (TextView) findViewById(R.id.family);
 
-        // Set a click listener on that View
-        family.setOnClickListener(new OnClickListener() {
-            // The code in this method will be executed when the family category is clicked on.
+
+
+
+        assert family != null;//visualstudio me obrigou a colocar
+
+        //Coloca um clickListener (escutador de click) no objeto que encontrou a View
+        family.setOnClickListener(new OnClickListener(){
+
             @Override
             public void onClick(View view) {
-                // Create a new intent to open the {@link FamilyActivity}
+                //Criando uma nova intenção "Intent" para abrir o {@link FamilyActivity) quanso clicado
                 Intent familyIntent = new Intent(MainActivity.this, FamilyActivity.class);
 
-                // Start the new activity
+                //Inicia a nova atividade
                 startActivity(familyIntent);
+
             }
         });
 
-        // Find the View that shows the colors category
+        //Encontra a TextView que quero manipular e coloca dentro do objeto que denominei de "colors"
         TextView colors = (TextView) findViewById(R.id.colors);
 
-        // Set a click listener on that View
-        colors.setOnClickListener(new OnClickListener() {
-            // The code in this method will be executed when the colors category is clicked on.
+
+        assert colors != null;//visualstudio me obrigou a colocar
+
+        //Coloca um clickListener (escutador de click) no objeto que encontrou a View
+        colors.setOnClickListener(new OnClickListener(){
+
             @Override
             public void onClick(View view) {
-                // Create a new intent to open the {@link ColorsActivity}
+                //Criando uma nova intenção "Intent" para abrir o {@link ColorsActivity) quanso clicado
                 Intent colorsIntent = new Intent(MainActivity.this, ColorsActivity.class);
 
-                // Start the new activity
+                //Inicia a nova atividade
                 startActivity(colorsIntent);
+
             }
         });
 
-        // Find the View that shows the phrases category
+        //Encontra a TextView que quero manipular e coloca dentro do objeto que denominei de "phrases"
         TextView phrases = (TextView) findViewById(R.id.phrases);
 
-        // Set a click listener on that View
-        phrases.setOnClickListener(new OnClickListener() {
-            // The code in this method will be executed when the phrases category is clicked on.
+
+        assert phrases != null;//visualstudio me obrigou a colocar
+        //Coloca um clickListener (escutador de click) no objeto que encontrou a View
+        phrases.setOnClickListener(new OnClickListener(){
+
             @Override
             public void onClick(View view) {
-                // Create a new intent to open the {@link PhrasesActivity}
+                //Criando uma nova intenção "Intent" para abrir o {@link PhrasesActivity) quando clicado
                 Intent phrasesIntent = new Intent(MainActivity.this, PhrasesActivity.class);
 
-                // Start the new activity
+                //Inicia a nova atividade
                 startActivity(phrasesIntent);
+
             }
         });
     }
+
 }
