@@ -15,6 +15,7 @@
  */
 package com.example.android.miwok;
 
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ListView;
@@ -33,16 +34,16 @@ public class PhrasesActivity extends AppCompatActivity {
         // Cria a lista de palavras
         ArrayList<Word> words = new ArrayList<Word>();
 
-        words.add(new Word("Where are you going?", "minto wuksus"));
-        words.add(new Word("What is your name?", "tinnә oyaase'nә"));
-        words.add(new Word("My name is...", "oyaaset..."));
-        words.add(new Word("How are you feeling?", "michәksәs?"));
-        words.add(new Word("I’m feeling good.", "kuchi achit"));
-        words.add(new Word("Are you coming?", "әәnәs'aa?"));
-        words.add(new Word("Yes, I’m coming.", "hәә’ әәnәm"));
-        words.add(new Word("I’m coming.", "әәnәm"));
-        words.add(new Word("Let’s go.", "yoowutis"));
-        words.add(new Word("Come here.", "әnni'nem"));
+        words.add(new Word("Where are you going?", "minto wuksus", MediaPlayer.create(this, R.raw.color_red)));
+        words.add(new Word("What is your name?", "tinnә oyaase'nә", MediaPlayer.create(this, R.raw.color_red)));
+        words.add(new Word("My name is...", "oyaaset...", MediaPlayer.create(this, R.raw.color_red)));
+        words.add(new Word("How are you feeling?", "michәksәs?", MediaPlayer.create(this, R.raw.color_red)));
+        words.add(new Word("I’m feeling good.", "kuchi achit", MediaPlayer.create(this, R.raw.color_red)));
+        words.add(new Word("Are you coming?", "әәnәs'aa?", MediaPlayer.create(this, R.raw.color_red)));
+        words.add(new Word("Yes, I’m coming.", "hәә’ әәnәm", MediaPlayer.create(this, R.raw.color_red)));
+        words.add(new Word("I’m coming.", "әәnәm", MediaPlayer.create(this, R.raw.color_red)));
+        words.add(new Word("Let’s go.", "yoowutis", MediaPlayer.create(this, R.raw.color_red)));
+        words.add(new Word("Come here.", "әnni'nem", MediaPlayer.create(this, R.raw.color_red)));
 
 
 

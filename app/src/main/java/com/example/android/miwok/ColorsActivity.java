@@ -15,11 +15,15 @@
  */
 package com.example.android.miwok;
 
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ListView;
 
 import java.util.ArrayList;
+
+import static android.R.attr.x;
+import static android.os.Build.VERSION_CODES.M;
 
 public class ColorsActivity extends AppCompatActivity {
 
@@ -30,17 +34,19 @@ public class ColorsActivity extends AppCompatActivity {
         //inicializa o root(a atividade que essa classe vai poder manipular)
         setContentView(R.layout.word_list);
 
+
+
         // Cria a lista de palavras
         ArrayList<Word> words = new ArrayList<Word>();
 
-        words.add(new Word("red", "weṭeṭṭi", R.drawable.color_red));
-        words.add(new Word("mustard yellow", "chiwiiṭә", R.drawable.color_mustard_yellow));
-        words.add(new Word("dusty yellow", "ṭopiisә", R.drawable.color_dusty_yellow));
-        words.add(new Word("green", "chokokki", R.drawable.color_green));
-        words.add(new Word("brown", "ṭakaakki", R.drawable.color_brown));
-        words.add(new Word("gray", "ṭopoppi", R.drawable.color_gray));
-        words.add(new Word("black", "kululli", R.drawable.color_black));
-        words.add(new Word("white", "kelelli", R.drawable.color_white));
+        words.add(new Word("mustard yellow", "chiwiiṭә", R.drawable.color_mustard_yellow, MediaPlayer.create(this, R.raw.color_red)));
+        words.add(new Word("dusty yellow", "ṭopiisә", R.drawable.color_dusty_yellow, MediaPlayer.create(this, R.raw.color_red)));
+        words.add(new Word("green", "chokokki", R.drawable.color_green, MediaPlayer.create(this, R.raw.color_red)));
+        words.add(new Word("brown", "ṭakaakki", R.drawable.color_brown, MediaPlayer.create(this, R.raw.color_red)));
+        words.add(new Word("gray", "ṭopoppi", R.drawable.color_gray, MediaPlayer.create(this, R.raw.color_red)));
+        words.add(new Word("black", "kululli", R.drawable.color_black, MediaPlayer.create(this, R.raw.color_red)));
+        words.add(new Word("white", "kelelli", R.drawable.color_white, MediaPlayer.create(this, R.raw.color_red)));
+
 
 
         // Create an {@link ArrayAdapter}, whose data source is a list of Strings. The
@@ -58,6 +64,7 @@ public class ColorsActivity extends AppCompatActivity {
         //o root é o arquivo word_list
 
         ListView listView = (ListView) findViewById(R.id.list);
+
 
         // Make the {@link ListView} use the {@link ArrayAdapter} we created above, so that the
         // {@link ListView} will display list items for each word in the list of words.

@@ -2,16 +2,24 @@ package com.example.android.miwok;
 
 
 import android.app.Activity;
+import android.content.Intent;
+import android.media.MediaPlayer;
 import android.support.annotation.NonNull;
+import android.view.View.OnClickListener;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
+
+import static android.R.attr.x;
+import static android.os.Build.VERSION_CODES.M;
 
 /**
  * Created by Goku on 20/09/2016....
@@ -27,6 +35,7 @@ class WordAdapter extends ArrayAdapter<Word> {
     /** Resource HEXADECIMAL for the background color for this list of words */
     private int mColorResourceId;
 
+
     //private static final String LOG_TAG = WordAdapter.class.getSimpleName();
 
     WordAdapter(Activity context, ArrayList<Word> wordAdapters, int categoryColor) {
@@ -37,8 +46,10 @@ class WordAdapter extends ArrayAdapter<Word> {
 
         super(context, 0,wordAdapters);
         mColorResourceId = categoryColor;
-
     }
+
+
+
 
     @NonNull //Android Studio me obrigou
     @Override
@@ -82,13 +93,21 @@ class WordAdapter extends ArrayAdapter<Word> {
             imageView.setVisibility(View.GONE);
         }
 
-
-        LinearLayout categoryColorLinearLayout = (LinearLayout) listItemView.findViewById(R.id.category_color);
+        LinearLayout categoryColorLinearLayout = (LinearLayout) listItemView.findViewById(R.id.text_container);
         categoryColorLinearLayout.setBackgroundResource(mColorResourceId);
+
+
+        final MediaPlayer mediaPlayer = currentWord.getSound();
+        listItemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mediaPlayer.start();
+            }
+        });
+
 
         // Return the whole list item layout (containing 2 TextViews)
         // so that it can be shown in the ListView
         return listItemView;
-
     }
 }

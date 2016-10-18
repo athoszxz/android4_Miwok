@@ -1,6 +1,7 @@
 package com.example.android.miwok;
 
 import android.graphics.drawable.Drawable;
+import android.media.MediaPlayer;
 
 /**
  * Created by Goku on 20/09/2016.
@@ -16,16 +17,19 @@ class Word {
 
     /** Image Resource ID for the word */
     private int mImageId = NO_IMAGE_PROVIDED;
-
     private static final int NO_IMAGE_PROVIDED = -1;
+
+    /** Image Resource ID for the word */
+    private MediaPlayer mSoundId;
 
     /**Construtor: Cria um objeto Word dentro da própria classe Word com dois parâmetros
      *  @param englishTranslation é a palavra em inglês
      *
      * @param miwokTranslation é a palavra em miwok */
-    Word(String englishTranslation, String miwokTranslation){
+    Word(String englishTranslation, String miwokTranslation, MediaPlayer soundId){
         mEnglishTranslation = englishTranslation;
         mMiwokTranslation = miwokTranslation;
+        mSoundId = soundId;
     }
 
     /**Construtor 2: Cria um objeto Word dentro da própria classe Word com três parâmetros
@@ -34,10 +38,11 @@ class Word {
      * @param miwokTranslation é a palavra em miwok
      *
      * @param mmImage é o ID da imagem*/
-    Word(String englishTranslation, String miwokTranslation, int mmImage){
+    Word(String englishTranslation, String miwokTranslation, int mmImage, MediaPlayer soundId){
         mEnglishTranslation = englishTranslation;
         mMiwokTranslation = miwokTranslation;
         mImageId = mmImage;
+        mSoundId = soundId;
     }
 
     //Pega a tradução em inglês da palavra
@@ -62,6 +67,10 @@ class Word {
 
         /** Se as variáveis forem diferentes haverá uma imagem válida e o método retornará true */
         return mImageId != NO_IMAGE_PROVIDED;
+    }
+
+    MediaPlayer getSound() {
+        return mSoundId;
     }
 
 
