@@ -9,7 +9,6 @@ import android.view.View.OnClickListener;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -97,14 +96,6 @@ class WordAdapter extends ArrayAdapter<Word> {
         LinearLayout categoryColorLinearLayout = (LinearLayout) listItemView.findViewById(R.id.text_container);
         categoryColorLinearLayout.setBackgroundResource(mColorResourceId);
 
-
-        final MediaPlayer mediaPlayer = currentWord.getSound();
-        listItemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mediaPlayer.start();
-            }
-        });
 
 
         // Return the whole list item layout (containing 2 TextViews)

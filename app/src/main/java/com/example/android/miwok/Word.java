@@ -20,13 +20,13 @@ class Word {
     private static final int NO_IMAGE_PROVIDED = -1;
 
     /** Image Resource ID for the word */
-    private MediaPlayer mSoundId;
+    private int mSoundId;
 
     /**Construtor: Cria um objeto Word dentro da própria classe Word com dois parâmetros
      *  @param englishTranslation é a palavra em inglês
      *
      * @param miwokTranslation é a palavra em miwok */
-    Word(String englishTranslation, String miwokTranslation, MediaPlayer soundId){
+    Word(String englishTranslation, String miwokTranslation, int soundId){
         mEnglishTranslation = englishTranslation;
         mMiwokTranslation = miwokTranslation;
         mSoundId = soundId;
@@ -38,7 +38,7 @@ class Word {
      * @param miwokTranslation é a palavra em miwok
      *
      * @param mmImage é o ID da imagem*/
-    Word(String englishTranslation, String miwokTranslation, int mmImage, MediaPlayer soundId){
+    Word(String englishTranslation, String miwokTranslation, int mmImage, int soundId){
         mEnglishTranslation = englishTranslation;
         mMiwokTranslation = miwokTranslation;
         mImageId = mmImage;
@@ -69,7 +69,7 @@ class Word {
         return mImageId != NO_IMAGE_PROVIDED;
     }
 
-    MediaPlayer getSound() {
+    int getAudioResourceId() {
         return mSoundId;
     }
 
