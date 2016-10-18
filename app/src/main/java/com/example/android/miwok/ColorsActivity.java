@@ -18,6 +18,8 @@ package com.example.android.miwok;
 import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -26,6 +28,8 @@ import static android.R.attr.x;
 import static android.os.Build.VERSION_CODES.M;
 
 public class ColorsActivity extends AppCompatActivity {
+
+    private MediaPlayer mMediaPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,13 +43,14 @@ public class ColorsActivity extends AppCompatActivity {
         // Cria a lista de palavras
         ArrayList<Word> words = new ArrayList<Word>();
 
-        words.add(new Word("mustard yellow", "chiwiiṭә", R.drawable.color_mustard_yellow, MediaPlayer.create(this, R.raw.color_red)));
-        words.add(new Word("dusty yellow", "ṭopiisә", R.drawable.color_dusty_yellow, MediaPlayer.create(this, R.raw.color_red)));
-        words.add(new Word("green", "chokokki", R.drawable.color_green, MediaPlayer.create(this, R.raw.color_red)));
-        words.add(new Word("brown", "ṭakaakki", R.drawable.color_brown, MediaPlayer.create(this, R.raw.color_red)));
-        words.add(new Word("gray", "ṭopoppi", R.drawable.color_gray, MediaPlayer.create(this, R.raw.color_red)));
-        words.add(new Word("black", "kululli", R.drawable.color_black, MediaPlayer.create(this, R.raw.color_red)));
-        words.add(new Word("white", "kelelli", R.drawable.color_white, MediaPlayer.create(this, R.raw.color_red)));
+        words.add(new Word("mustard yellow", "chiwiiṭә", R.drawable.color_mustard_yellow, MediaPlayer.create(this, R.raw.color_mustard_yellow)));
+        words.add(new Word("dusty yellow", "ṭopiisә", R.drawable.color_dusty_yellow, MediaPlayer.create(this, R.raw.color_dusty_yellow)));
+        words.add(new Word("red", "seilá", R.drawable.color_red, MediaPlayer.create(this, R.raw.color_red)));
+        words.add(new Word("green", "chokokki", R.drawable.color_green, MediaPlayer.create(this, R.raw.color_green)));
+        words.add(new Word("brown", "ṭakaakki", R.drawable.color_brown, MediaPlayer.create(this, R.raw.color_brown)));
+        words.add(new Word("gray", "ṭopoppi", R.drawable.color_gray, MediaPlayer.create(this, R.raw.color_gray)));
+        words.add(new Word("black", "kululli", R.drawable.color_black, MediaPlayer.create(this, R.raw.color_black)));
+        words.add(new Word("white", "kelelli", R.drawable.color_white, MediaPlayer.create(this, R.raw.color_white)));
 
 
 
@@ -72,5 +77,6 @@ public class ColorsActivity extends AppCompatActivity {
         // 1 argument, which is the {@link ArrayAdapter} with the variable name itemsAdapter.
         assert listView != null;//essa linha android studio obrigou
         listView.setAdapter(adapter);
+
     }
 }
