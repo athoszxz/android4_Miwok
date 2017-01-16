@@ -107,10 +107,11 @@ class WordAdapter extends ArrayAdapter<Word> {
             //Set the background text container colored
             backgroundTextContainer.setBackgroundResource(mColorResourceId);
 
-        //Find background Text Container in the list_item.xml layout with the ID image
+      /*  //Find background Play Button Container in the list_item.xml layout with the ID image
         LinearLayout backgroundPlayButtonContainer = (LinearLayout) listItemView.findViewById(R.id.play_button_container);
             //Set the background text container colored
             backgroundPlayButtonContainer.setBackgroundResource(mColorResourceId);
+            */
 
         // Return the whole list item layout (containing 2 TextViews)
         // so that it can be shown in the ListView
