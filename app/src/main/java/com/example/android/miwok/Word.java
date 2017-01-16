@@ -19,6 +19,9 @@ class Word {
     private int mImageId = NO_IMAGE_PROVIDED;
     private static final int NO_IMAGE_PROVIDED = -1;
 
+    /** Image Resource ID for the play button */
+    private int mPlayButtonImage;
+
     /** Image Resource ID for the word */
     private int mSoundId;
 
@@ -26,9 +29,10 @@ class Word {
      *  @param englishTranslation é a palavra em inglês
      *
      * @param miwokTranslation é a palavra em miwok */
-    Word(String englishTranslation, String miwokTranslation, int soundId){
+    Word(String englishTranslation, String miwokTranslation, int playButtonImage, int soundId){
         mEnglishTranslation = englishTranslation;
         mMiwokTranslation = miwokTranslation;
+        mPlayButtonImage = playButtonImage;
         mSoundId = soundId;
     }
 
@@ -38,10 +42,11 @@ class Word {
      * @param miwokTranslation é a palavra em miwok
      *
      * @param mmImage é o ID da imagem*/
-    Word(String englishTranslation, String miwokTranslation, int mmImage, int soundId){
+    Word(String englishTranslation, String miwokTranslation, int mmImage, int playButtonImage, int soundId){
         mEnglishTranslation = englishTranslation;
         mMiwokTranslation = miwokTranslation;
         mImageId = mmImage;
+        mPlayButtonImage = playButtonImage;
         mSoundId = soundId;
     }
 
@@ -69,9 +74,24 @@ class Word {
         return mImageId != NO_IMAGE_PROVIDED;
     }
 
+
+    int getImage2() {
+        return mPlayButtonImage;
+    }
+
+
     int getAudioResourceId() {
         return mSoundId;
     }
 
-
+    @Override
+    public String toString() {
+        return "Word{" +
+                "mMiwokTranslation='" + mMiwokTranslation + '\'' +
+                ", mEnglishTranslation='" + mEnglishTranslation + '\'' +
+                ", mImageId=" + mImageId +
+                ", mPlayButtonImage=" + mPlayButtonImage +
+                ", mSoundId=" + mSoundId +
+                '}';
+    }
 }

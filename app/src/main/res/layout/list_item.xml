@@ -44,4 +44,20 @@
             tools:text="one" />
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/play_button_container">
+
+        <ImageView
+            android:id="@+id/play_button"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="16dp"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            />
+
+    </LinearLayout>
+
+
 </LinearLayout>
