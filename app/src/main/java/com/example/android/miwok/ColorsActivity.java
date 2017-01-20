@@ -91,11 +91,11 @@ public class ColorsActivity extends AppCompatActivity {
         words.add(new Word("mustard yellow", "chiwiiṭә", R.drawable.color_mustard_yellow, R.drawable.ic_play_arrow_white_36dp, R.raw.color_mustard_yellow));
         words.add(new Word("dusty yellow", "ṭopiisә", R.drawable.color_dusty_yellow, R.drawable.ic_play_arrow_white_36dp, R.raw.color_dusty_yellow));
         words.add(new Word("red", "seilá", R.drawable.color_red, R.drawable.ic_play_arrow_white_36dp, R.raw.color_red));
-        words.add(new Word("green", "chokokki", R.drawable.ic_play_arrow_white_36dp, R.raw.color_green));
-        words.add(new Word("brown", "ṭakaakki", R.drawable.ic_play_arrow_white_36dp, R.raw.color_brown));
-        words.add(new Word("gray", "ṭopoppi", R.drawable.ic_play_arrow_white_36dp, R.raw.color_gray));
-        words.add(new Word("black", "kululli", R.drawable.ic_play_arrow_white_36dp, R.raw.color_black));
-        words.add(new Word("white", "kelelli", R.drawable.ic_play_arrow_white_36dp, R.raw.color_white));
+        words.add(new Word("green", "chokokki", R.drawable.color_green , R.drawable.ic_play_arrow_white_36dp, R.raw.color_green));
+        words.add(new Word("brown", "ṭakaakki", R.drawable.color_brown,R.drawable.ic_play_arrow_white_36dp, R.raw.color_brown));
+        words.add(new Word("gray", "ṭopoppi", R.drawable.color_gray, R.drawable.ic_play_arrow_white_36dp, R.raw.color_gray));
+        words.add(new Word("black", "kululli", R.drawable.color_black, R.drawable.ic_play_arrow_white_36dp, R.raw.color_black));
+        words.add(new Word("white", "kelelli", R.drawable.color_white, R.drawable.ic_play_arrow_white_36dp, R.raw.color_white));
 
 
         // Create an {@link ArrayAdapter}, whose data source is a list of Strings. The

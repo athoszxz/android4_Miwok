@@ -59,9 +59,7 @@ public class MainActivity extends AppCompatActivity {
         TextView family = (TextView) findViewById(R.id.family);
 
 
-
-
-        assert family != null;//visualstudio me obrigou a colocar
+        assert family != null;//Androidstudio me obrigou a colocar
 
         //Coloca um clickListener (escutador de click) no objeto que encontrou a View
         family.setOnClickListener(new OnClickListener(){
@@ -81,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
         TextView colors = (TextView) findViewById(R.id.colors);
 
 
-        assert colors != null;//visualstudio me obrigou a colocar
+        assert colors != null;//Androidstudio me obrigou a colocar
 
         //Coloca um clickListener (escutador de click) no objeto que encontrou a View
         colors.setOnClickListener(new OnClickListener(){

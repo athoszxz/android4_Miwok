@@ -96,9 +96,7 @@ public class PhrasesActivity extends AppCompatActivity {
         words.add(new Word("Let’s go.", "yoowutis", R.drawable.ic_play_arrow_white_36dp, R.raw.phrase_lets_go));
         words.add(new Word("Come here.", "әnni'nem", R.drawable.ic_play_arrow_white_36dp, R.raw.phrase_come_here));
 
-
-
-
+        
         // Create an {@link ArrayAdapter}, whose data source is a list of Strings. The
         // adapter knows how to create layouts for each item in the list, using the
         // simple_list_item_1.xml layout resource defined in the Android framework.
